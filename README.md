@@ -1,4 +1,5 @@
-# WinUI3 Project with C#
+# Sample WinUI3 Project 
+
 
 A simple project demonstrating the use of WinUI3 for creating modern Windows applications using C#.
 
