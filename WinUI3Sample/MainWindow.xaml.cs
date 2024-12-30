@@ -28,9 +28,21 @@ namespace WinUI3Sample
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private async void myButton_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+            string name = txtName.Text;
+            string email = txtEmail.Text;
+            string password = txtPassword.Password;
+
+            ContentDialog dialog = new ContentDialog
+            {
+                Title = "Form Submission",
+                Content = $"Name: {name}\nEmail: {email}\nPassword: {password}",
+                PrimaryButtonText = "OK"
+            };
+
+            dialog.XamlRoot = this.Content.XamlRoot;
+            await dialog.ShowAsync();
         }
     }
 }
